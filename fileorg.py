@@ -2,7 +2,8 @@ import os
 import shutil
 
 # Define the source folder to organize
-source_folder = r"/Users/mirzashaheeniqubal/Downloads"
+source_folder = os.path.dirname(os.path.abspath(__file__))
+
 
 # Define destination folders based on file extensions
 destination_map = {
@@ -25,6 +26,10 @@ for folder in destination_map.keys():
 for filename in os.listdir(source_folder):
     file_path = os.path.join(source_folder, filename)
 
+    # Skip this script itself
+    if filename == os.path.basename(__file__):
+        continue
+        
     # Get the file extension
     _, file_extension = os.path.splitext(filename)
     file_extension = file_extension.lower()
