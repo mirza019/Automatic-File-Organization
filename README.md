@@ -1,56 +1,39 @@
-# 📂 File Organizer Script (`fileorg.py`)
+# File Organizer GUI
 
-A simple Python script that organizes files in the same folder where it is placed. It categorizes files into subfolders like Documents, Images, Videos, etc., based on file extensions.
+A simple and intuitive graphical user interface (GUI) application to help you organize your files.
 
----
+## Features
 
-## 🧠 What It Does
+*   **Organize Today's Files:** Automatically moves files created on the current day into categorized folders (Documents, Images, Videos, Music, Archives, Installers, Applications, Others).
+*   **Undo Last Organization:** Reverts the changes made by the most recent organization, moving files back to their original locations.
+*   **Progress Bar:** Provides visual feedback on the organization process.
+*   **Activity Log:** Displays real-time messages about files being moved.
 
-- Organizes files in the **current folder** where `fileorg.py` is located.
-- Automatically moves files into categorized subfolders:
-  - **Documents**: `.txt`, `.pdf`, `.doc`, `.docx`
-  - **Images**: `.jpg`, `.jpeg`, `.png`, `.gif`
-  - **Videos**: `.mp4`, `.mov`, `.avi`
-  - **Music**: `.mp3`, `.wav`
-  - **Archives**: `.zip`, `.rar`, `.7z`
-  - **Installers**: `.dmg`, `.pkg`
-  - **Applications**: `.app` (macOS bundles)
-  - **Others**: Any other file types
-- Skips organizing itself (`fileorg.py`)
-- Creates folders automatically if they don’t exist
-- Does **not** delete or modify file contents
+## Requirements
 
----
+*   Python 3.x
+*   `tkinter` (usually included with Python installations)
 
-## 🚀 How to Use
+## How to Use
 
-1. **Copy `fileorg.py`** into the unorganized folder you want to clean up.
-2. **⚠️ Do not rename** the script — it must remain as `fileorg.py`.
-3. Open a terminal and navigate to that folder:
+1.  **Download the Script:**
+    Save the `fileorg_gui.py` file to your desired directory (e.g., your Downloads folder).
+
+2.  **Run the Application:**
+    Open your terminal or command prompt, navigate to the directory where you saved the script, and run the following command:
 
     ```bash
-    cd /path/to/your/unorganized-folder
+    python3 fileorg_gui.py
     ```
 
-4. Run the script:
+    A new window titled "File Organizer" will appear.
 
-    ```bash
-    python3 fileorg.py
-    ```
+3.  **Organize Today's Files:**
+    Click the "Organize Today's Files" button. The application will scan the directory where the script is located and move files created on the current day into their respective subfolders. Progress will be shown in the progress bar, and details will appear in the activity log.
 
-✅ Your files will be sorted into folders inside the same directory.
+4.  **Undo Last Organization:**
+    If you need to revert the last organization, click the "Undo Last Organization" button. This will move the files back to their original locations based on the last successful organization log.
 
----
+## Developed by
 
-## 📦 Requirements
-
-- Python 3.x
-- No external libraries required (uses `os` and `shutil`)
-
----
-
-## 📝 Notes
-
-- Works on macOS, and can be adapted for Windows or Linux.
-- `.app` files are treated as directories and moved accordingly.
-- Only affects the contents of the folder it’s in.
+Mirza Shaheen Iqubal
